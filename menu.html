@@ -1,1 +1,196 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUTORIAL DOXING | Dashboard</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo" id="logo">TUTORIAL DOXING</div>
+        <div class="nav-links">
+            <a href="#about-intel">About</a>
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contacts">Contacts</a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div data-aos="zoom-in">
+            <h1 class="filled">TUTORIAL</h1>
+            <h1 class="outline">DOXING</h1>
+        </div>
+        <div class="stats" data-aos="fade-up" data-aos-delay="200">
+            <div class="stat-item"><strong>10</strong><span>VALID KEYS</span></div>
+            <div class="stat-item"><strong>24/7</strong><span>TUTORIAL</span></div>
+            <div class="stat-item"><strong>∞</strong><span>PRACTICE</span></div>
+        </div>
+
+        <div id="about-intel" class="info-section" data-aos="fade-up" data-aos-delay="300">
+            <h2>what is doxing tutorial</h2>
+            <h3>learn the methodology</h3>
+            <p>This platform demonstrates osint techniques for educational purposes. understand how information can be gathered from public sources, and learn to protect your own digital footprint.</p>
+            <div class="feature-grid">
+                <div class="feature-card"><strong>passive recon</strong><span>understand how emails, usernames and domains leak data.</span></div>
+                <div class="feature-card"><strong>data correlation</strong><span>see how cross-referencing uncovers hidden connections.</span></div>
+                <div class="feature-card"><strong>defensive tips</strong><span>learn what exposes you and how to minimize it.</span></div>
+            </div>
+        </div>
+
+        <div id="features" class="features-block" data-aos="fade-up" data-aos-delay="400">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card"><strong>identifier search</strong><span>try email, phone, or nickname — see what’s exposed.</span></div>
+                <div class="feature-card"><strong>multi‑source demo</strong><span>simulated queries to breach databases and social media.</span></div>
+                <div class="feature-card"><strong>export & reports</strong><span>learn how data is compiled into a dossier.</span></div>
+            </div>
+            <div class="stats-mini">
+                <div><strong>10</strong><span>ACTIVE KEYS</span></div>
+                <div><strong>1240</strong><span>SESSIONS</span></div>
+                <div><strong>12</strong><span>MODULES</span></div>
+            </div>
+        </div>
+
+        <div id="pricing" class="pricing-section" data-aos="fade-up" data-aos-delay="500">
+            <h2>pricing (educational)</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card"><h3>1 DAY</h3><div class="price">$3</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+                <div class="pricing-card"><h3>3 DAYS</h3><div class="price">$5</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+                <div class="pricing-card"><h3>7 DAYS</h3><div class="price">$10</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+                <div class="pricing-card"><h3>1 MONTH</h3><div class="price">$30</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+                <div class="pricing-card"><h3>3 MONTHS</h3><div class="price">$60</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+                <div class="pricing-card"><h3>PERMANENT</h3><div class="price">$100</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+            </div>
+        </div>
+
+        <div id="contacts" class="contacts-section" data-aos="fade-up" data-aos-delay="600">
+            <h2>contacts</h2>
+            <div class="contacts-grid">
+                <div class="contact-item">TG: <a href="https://t.me/swatwastend" target="_blank">@swatwastend</a></div>
+                <div class="contact-item">DS: afddafdf3</div>
+            </div>
+        </div>
+
+        <div class="footer-note"><span>● TUTORIAL MODE ● RESPONSIBLE USE ●</span></div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="server.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // === BACKGROUND (same white-on-black) ===
+        (function initWhiteBackground() {
+            const container = document.getElementById('canvas-container');
+            if (!container) return;
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 20;
+            camera.position.y = 2;
+            camera.rotation.x = 0.1;
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            container.appendChild(renderer.domElement);
+
+            const ambient = new THREE.AmbientLight(0x404060);
+            scene.add(ambient);
+            const dirLight = new THREE.DirectionalLight(0xffffff, 0.8);
+            dirLight.position.set(1, 2, 5);
+            scene.add(dirLight);
+
+            const whiteColor = 0xffffff;
+            const triangles = [];
+
+            for (let i = 0; i < 45; i++) {
+                const size = 0.4 + Math.random() * 0.7;
+                const h = size * Math.sqrt(3) / 2;
+                const vertices = new Float32Array([0, h/2, 0, -size/2, -h/2, 0, size/2, -h/2, 0]);
+                const geometry = new THREE.BufferGeometry();
+                geometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+                geometry.setIndex([0, 1, 1, 2, 2, 0]);
+
+                const line = new THREE.LineSegments(geometry, new THREE.LineBasicMaterial({ color: whiteColor }));
+                const fillGeo = new THREE.BufferGeometry();
+                fillGeo.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+                fillGeo.setIndex([0, 1, 2]);
+                const fill = new THREE.Mesh(fillGeo, new THREE.MeshBasicMaterial({ color: whiteColor, transparent: true, opacity: 0.06, side: THREE.DoubleSide }));
+                const group = new THREE.Group();
+                group.add(line);
+                group.add(fill);
+                group.position.set((Math.random()-0.5)*40, (Math.random()-0.5)*30, (Math.random()-0.5)*30-5);
+                group.rotation.set(Math.random()*Math.PI, Math.random()*Math.PI, Math.random()*Math.PI);
+                group.userData = {
+                    rotSpeedX: (Math.random()-0.5)*0.001,
+                    rotSpeedY: (Math.random()-0.5)*0.001,
+                    rotSpeedZ: (Math.random()-0.5)*0.001,
+                    floatSpeed: 0.0004+Math.random()*0.0008,
+                    floatPhase: Math.random()*2*Math.PI,
+                    initialPos: group.position.clone()
+                };
+                scene.add(group);
+            }
+
+            const circ = new THREE.CircleGeometry(1.5,32);
+            const c1 = new THREE.Mesh(circ, new THREE.MeshBasicMaterial({ color: whiteColor, transparent: true, opacity: 0.1 }));
+            c1.position.set(-12,8,-15);
+            scene.add(c1);
+            const c2 = new THREE.Mesh(circ, new THREE.MeshBasicMaterial({ color: whiteColor, transparent: true, opacity: 0.08 }));
+            c2.position.set(15,-10,-20);
+            c2.scale.set(1.2,1.2,1.2);
+            scene.add(c2);
+            
+            const sq = new THREE.Mesh(new THREE.BoxGeometry(8,8,0.5), new THREE.MeshBasicMaterial({ color: whiteColor, wireframe: true, transparent: true, opacity: 0.1 }));
+            sq.position.set(0,0,-25);
+            sq.userData = { time: Math.random()*100, rangeX: 20, rangeY: 15, baseX: 0, baseY: 0 };
+            scene.add(sq);
+
+            function animate() {
+                requestAnimationFrame(animate);
+                const t = performance.now() * 0.001;
+                scene.children.forEach(c => {
+                    if (c.userData?.rotSpeedX) {
+                        c.rotation.x += c.userData.rotSpeedX;
+                        c.rotation.y += c.userData.rotSpeedY;
+                        c.rotation.z += c.userData.rotSpeedZ;
+                        c.position.y = c.userData.initialPos.y + Math.sin(t*0.6 + c.userData.floatPhase)*0.4;
+                        c.position.x = c.userData.initialPos.x + Math.cos(t*0.5 + c.userData.floatPhase)*0.4;
+                        c.position.z = c.userData.initialPos.z + Math.sin(t*0.55 + c.userData.floatPhase)*0.4;
+                    }
+                });
+                sq.userData.time += 0.003;
+                sq.position.x = Math.sin(sq.userData.time*0.15)*sq.userData.rangeX;
+                sq.position.y = Math.cos(sq.userData.time*0.1)*sq.userData.rangeY;
+                sq.rotation.z += 0.0005;
+                camera.position.x = Math.sin(t*0.04)*2;
+                camera.position.y = 2 + Math.sin(t*0.05)*0.5;
+                camera.lookAt(0,0,0);
+                renderer.render(scene,camera);
+            }
+            animate();
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        })();
+
+        document.getElementById('logo').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        if (localStorage.getItem('tutorial_access') !== 'granted') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
