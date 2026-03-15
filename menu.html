@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TUTORIAL DOXING | Dashboard</title>
+    <title>TUTORIAL DOXING | DASHBOARD</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -15,10 +14,9 @@
     <nav class="navbar" data-aos="fade-down">
         <div class="logo" id="logo">TUTORIAL DOXING</div>
         <div class="nav-links">
-            <a href="#about-intel">About</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contacts">Contacts</a>
+            <a href="#guide">📘 GUIDE</a>
+            <a href="#tools">🛠️ TOOLS</a>
+            <a href="#contacts">📞 CONTACTS</a>
         </div>
     </nav>
 
@@ -27,58 +25,82 @@
             <h1 class="filled">TUTORIAL</h1>
             <h1 class="outline">DOXING</h1>
         </div>
-        <div class="stats" data-aos="fade-up" data-aos-delay="200">
-            <div class="stat-item"><strong>10</strong><span>VALID KEYS</span></div>
-            <div class="stat-item"><strong>24/7</strong><span>TUTORIAL</span></div>
-            <div class="stat-item"><strong>∞</strong><span>PRACTICE</span></div>
-        </div>
 
-        <div id="about-intel" class="info-section" data-aos="fade-up" data-aos-delay="300">
-            <h2>what is doxing tutorial</h2>
-            <h3>learn the methodology</h3>
-            <p>This platform demonstrates osint techniques for educational purposes. understand how information can be gathered from public sources, and learn to protect your own digital footprint.</p>
-            <div class="feature-grid">
-                <div class="feature-card"><strong>passive recon</strong><span>understand how emails, usernames and domains leak data.</span></div>
-                <div class="feature-card"><strong>data correlation</strong><span>see how cross-referencing uncovers hidden connections.</span></div>
-                <div class="feature-card"><strong>defensive tips</strong><span>learn what exposes you and how to minimize it.</span></div>
+        <div id="guide" class="info-section" data-aos="fade-up" data-aos-delay="300">
+            <h2>📖 БАЗОВОЕ РУКОВОДСТВО ПО OSINT</h2>
+            
+            <div class="guide-content">
+                <h3>🔍 1. Sherlock — универсальный инструмент</h3>
+                <p>Все знают как пользоваться шерлоком, но что делать если не выдало информации, но мы знаем год, а в связях есть фамилия и имя?</p>
+                <p>➡️ Заходите в шерлок, нажимаете "поиск по неполным данным", вставляете имя и фамилию. После поиска вам выдаст: Имя, Фамилию, Отчество, дату рождения. Вставляете эти данные в обычный поиск шерлока и получаете всю информацию: родственников, адреса, телефоны и т.д.</p>
+
+                <h3>🤖 1.2 Дополнительные боты</h3>
+                <ul class="tools-list">
+                    <li><strong>Vector</strong> — мощный агрегатор данных</li>
+                    <li><strong>LeakOSINT</strong> — поиск по утечкам</li>
+                    <li><strong>vkHistory</strong> — история ВК, даже если список друзей скрыт</li>
+                    <li><strong>DeepSearch</strong> — глубинный поиск</li>
+                    <li><strong>krampus</strong> — специализированный поиск</li>
+                </ul>
+
+                <h3>🌐 1.3 Полезные сайты и Discord ресурсы</h3>
+                <ul class="tools-list">
+                    <li><strong>intelscry</strong> - <a href="https://discord.gg/hgyPBVnc" target="_blank">https://discord.gg/hgyPBVnc</a> — очень мощный инструмент, есть встроенный LeakOSINT и Sherlock</li>
+                    <li><strong>Datawave</strong> - <a href="https://csint.org/" target="_blank">https://csint.org/</a> — давно не обновлялся, но по дискорду хорошо пробивает</li>
+                    <li><strong>CsintTools</strong> - <a href="https://www.csint.tools/" target="_blank">https://www.csint.tools/</a> — имба сайт, но платный</li>
+                    <li><strong>osintkit</strong> — очень фришный сайт, тоже платно</li>
+                    <li><strong>search4faces</strong> - <a href="https://search4faces.com/" target="_blank">https://search4faces.com/</a> — поиск по лицу</li>
+                    <li><strong>fsb.sex</strong> - <a href="https://fsb.sex/" target="_blank">https://fsb.sex/</a> — очень полезный сайт для пробива (фри)</li>
+                    <li><strong>Яндекс Intex</strong> — поиск по нику, можно выйти на тикток и другие соцсети</li>
+                </ul>
+
+                <h3>👥 2. Если есть только ВК</h3>
+                <p>Ничего нет: ни ФИО, ни даты, только ВК. Можно проверить есть ли у него мама в ВК. Заходим в VkHistory, вставляем ВК, получаем ID. Вставляем ID в страницу: vk/idцифры, перебираем и находим родственников. Найденный ВК вставляем в ботов.</p>
+
+                <h3>📱 3. Если есть номер (физ/вирт)</h3>
+                <p><strong>3.1</strong> Заходим в Телелог (фанстат), смотрим по никам, сообщениям. Анализируем всё. Пытаемся задоркать по никам, если выдает подарочные связи — спрашиваем через них.</p>
+                <p><strong>3.2</strong> Альтернатива: втереться в доверие и узнать о человеке многое (очень долгий способ)</p>
+                <p><strong>3.3</strong> Опрашивать всех друзей, рассматривать всё, воркать. (Если новорег — бесполезно)</p>
+
+                <div class="warning-block">
+                    ⚠️ Это базовый вариант в упрощенном виде. Вам нужно самостоятельно обучаться и узнавать больше. Вам даны сайты для пробива, но лучше думать своей головой.
+                </div>
+
+                <div class="tips-block">
+                    <h4>💡 Pro Tips:</h4>
+                    <p>• Всегда проверяйте информацию из нескольких источников</p>
+                    <p>• Сохраняйте все найденные данные в структурированном виде</p>
+                    <p>• Используйте связку из 3-4 инструментов для верификации</p>
+                    <p>• Обращайте внимание на метаданные фотографий</p>
+                    <p>• Проверяйте старые версии сайтов через archive.org</p>
+                </div>
             </div>
         </div>
 
-        <div id="features" class="features-block" data-aos="fade-up" data-aos-delay="400">
-            <h2>Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card"><strong>identifier search</strong><span>try email, phone, or nickname — see what’s exposed.</span></div>
-                <div class="feature-card"><strong>multi‑source demo</strong><span>simulated queries to breach databases and social media.</span></div>
-                <div class="feature-card"><strong>export & reports</strong><span>learn how data is compiled into a dossier.</span></div>
-            </div>
-            <div class="stats-mini">
-                <div><strong>10</strong><span>ACTIVE KEYS</span></div>
-                <div><strong>1240</strong><span>SESSIONS</span></div>
-                <div><strong>12</strong><span>MODULES</span></div>
-            </div>
-        </div>
-
-        <div id="pricing" class="pricing-section" data-aos="fade-up" data-aos-delay="500">
-            <h2>pricing (educational)</h2>
-            <div class="pricing-grid">
-                <div class="pricing-card"><h3>1 DAY</h3><div class="price">$3</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
-                <div class="pricing-card"><h3>3 DAYS</h3><div class="price">$5</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
-                <div class="pricing-card"><h3>7 DAYS</h3><div class="price">$10</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
-                <div class="pricing-card"><h3>1 MONTH</h3><div class="price">$30</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
-                <div class="pricing-card"><h3>3 MONTHS</h3><div class="price">$60</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
-                <div class="pricing-card"><h3>PERMANENT</h3><div class="price">$100</div><ul><li>full access</li><li>example limit 1</li></ul><a href="https://t.me/swatwastend" class="buy-btn" target="_blank">contact</a></div>
+        <div id="tools" class="tools-section" data-aos="fade-up" data-aos-delay="400">
+            <h2>🛠️ БЫСТРЫЙ ДОСТУП К ИНСТРУМЕНТАМ</h2>
+            <div class="tools-grid">
+                <a href="https://t.me/sherlock_bot" target="_blank" class="tool-card">🤖 Sherlock Bot</a>
+                <a href="https://t.me/vkHistory_bot" target="_blank" class="tool-card">📜 VkHistory</a>
+                <a href="https://t.me/LeakOSINT_bot" target="_blank" class="tool-card">💧 LeakOSINT</a>
+                <a href="https://search4faces.com" target="_blank" class="tool-card">👤 Search4Faces</a>
+                <a href="https://fsb.sex" target="_blank" class="tool-card">🔍 FSB.SEX</a>
+                <a href="https://csint.org" target="_blank" class="tool-card">📊 Datawave</a>
+                <a href="https://www.csint.tools" target="_blank" class="tool-card">⚡ CSINT Tools</a>
+                <a href="https://yandex.ru" target="_blank" class="tool-card">🌐 Yandex Intex</a>
             </div>
         </div>
 
         <div id="contacts" class="contacts-section" data-aos="fade-up" data-aos-delay="600">
-            <h2>contacts</h2>
+            <h2>📞 КОНТАКТЫ</h2>
             <div class="contacts-grid">
-                <div class="contact-item">TG: <a href="https://t.me/swatwastend" target="_blank">@swatwastend</a></div>
-                <div class="contact-item">DS: afddafdf3</div>
+                <div class="contact-item">📱 Telegram: <a href="https://t.me/swatwastend" target="_blank">@swatwastend</a></div>
+                <div class="contact-item">💬 Discord: afddafdf3</div>
+                <div class="contact-item">📧 Почта: support@tutorial.com</div>
             </div>
         </div>
 
-        <div class="footer-note"><span>● TUTORIAL MODE ● RESPONSIBLE USE ●</span></div>
+        <div class="footer-note"><span>● OSINT TUTORIAL ● RESPONSIBLE USE ONLY ●</span></div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -87,7 +109,7 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // === BACKGROUND (same white-on-black) ===
+        // === BACKGROUND ===
         (function initWhiteBackground() {
             const container = document.getElementById('canvas-container');
             if (!container) return;
@@ -108,8 +130,6 @@
             scene.add(dirLight);
 
             const whiteColor = 0xffffff;
-            const triangles = [];
-
             for (let i = 0; i < 45; i++) {
                 const size = 0.4 + Math.random() * 0.7;
                 const h = size * Math.sqrt(3) / 2;
